@@ -1,4 +1,7 @@
-const jwt = require('jsonwebtoken');//permet d'identifier un user par son token
+//Identification du user par son token
+const jwt = require('jsonwebtoken');
+
+//Importation du module dotenv
 const dotenv = require("dotenv")
 
 
