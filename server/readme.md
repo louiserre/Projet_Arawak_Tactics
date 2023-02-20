@@ -8,15 +8,15 @@ http://localhost:3000/api/authentification/signup
 http://localhost:3000/api/authentification/signin
 
 ## La route Post pour créer la fiche user (create)
-http://localhost:3000/api/fiche_user/create
+http://localhost:3000/api/authentification/create
 
 ## La route get pour afficher tous les objet de la ficheUser 
-http://localhost:3000/api/fiche_user/readOne
+http://localhost:3000/api/authentification/readOne
 
 
-## La route get pour afficher un objet grace a son _id
-http://localhost:3000/api/fiche_user/update/:id
+## La route put pour afficher un objet grace a son _id
+http://localhost:3000/api/authentification/update/:id
 
 
-## La route put pour modifier un objet qui a été sélectionner par son id
-http://localhost:3000/api/fiche_user/delete
+## La route delete pour supprimer un objet qui a été sélectionner 
+http://localhost:3000/api/authentification/delete
