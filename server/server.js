@@ -1,5 +1,5 @@
 //Importation de express
-const express = require("express")//importation d'express
+const express = require("express")
 
 //Importation des routes
 const userRoutes = require("./routes/user.js") 

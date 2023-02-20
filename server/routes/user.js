@@ -1,26 +1,3 @@
-/*const express = require("express")
-const router = express.Router();
-
-//Importation du middleware password
-const password = require("../middleware/password.js")
-
-//Importation du controllers user.js
-const userController = require("../controllers/user.js")
-//console.log("--->CONTENU usercontroller - routes/user.js");
-//console.log(userController);
-
-
-// La Route signup (endpoint)
-router.post("/signup",password,userController.signup)
-
-// La route login
-router.post("/signin",userController.signin) // login
-
-//Exportation du module
-module.exports = router*/
-
-////////////// test /////////////////////////
-
 const express = require("express")
 const router = express.Router();
 
@@ -32,11 +9,9 @@ const authentification = require("../middleware/authentification.js")
 
 //Importation du controllers user.js
 const userController = require("../controllers/user.js")
-//console.log("--->CONTENU usercontroller - routes/user.js");
-//console.log(userController);
 
 
-// La Route signup (endpoint)
+// La Route signup 
 router.post("/signup",password,userController.signup)
 
 // La route login

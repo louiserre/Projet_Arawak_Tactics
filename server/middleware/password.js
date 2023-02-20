@@ -1,9 +1,10 @@
+//Importation du module password-validator
 const passwordValidator = require('password-validator');
 
 //Création du schéma
 const passwordSchema = new passwordValidator()
 
-// Le schéma que doit respecter le mot de passe
+//Schéma que doit respecter le mot de passe
 passwordSchema
 .is().min(8)                                    // Minimum length 8
 .is().max(100)                                  // Maximum length 100
@@ -14,14 +15,10 @@ passwordSchema
 .is().not().oneOf(['Passw0rd', 'Password123']); // Blacklist these values
 
 
-//console.log("--->CONTENU : passworSchema")
-//console.log(passwordSchema);
-
-
 // Vérification de la qualité du password par rapport au schéma
 module.exports= (req,res,next) => {
     if (passwordSchema.validate(req.body.password)) {
-        next()//next permet de passer au middleware suivant
+        next()
     }else{
         return res
         .status(400)
