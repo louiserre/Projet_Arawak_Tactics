@@ -1,0 +1,384 @@
+/**************************** Commun ****************************/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+@font-face {
+    font-family: "Unica One";
+    src: url("assets/font/unicaOne/UnicaOne-Regular.ttf");
+}
+
+
+.font{
+    font-family: 'Unica One', cursive;
+    color: aliceblue;
+}
+
+
+/****************************** Header *******************************/
+
+.imageAccueil{
+    width: 100%;/*A mettre dans le media quey*/
+    height: 650px;/*A mettre dans le media quey*/
+    background-image: url("/src/assets/images/imageAccueil.jpg");
+    background-attachment: scroll;
+    background-size: cover;
+    background-repeat: no-repeat; 
+             
+}
+
+
+.animationImageAccueil{    
+    animation-name: imageAccueil;
+    animation-duration: 0.6s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.1s;
+    animation-direction: normal; 
+    animation-fill-mode: backwards;
+    animation-play-state: running;
+}
+
+@keyframes imageAccueil {        
+    0% {         
+        transform: scale(0);
+    }/*début (0%/from)*/
+
+    100% {         
+        transform: scale(1);         
+    }/*fin (100%/to)*/    
+}
+
+
+.h2Header{
+    /*background-color: blueviolet;*/
+    font-family: 'Unica One', cursive;
+    /*font-style: italic;*/
+    color: aliceblue;
+    margin-top: 150px; /*A mettre dans le media quey*/
+    display: flex;
+    justify-content: center;
+    font-size: 80px;                /*A mettre dans le media quey*/
+    font-weight: 400px;             /*A mettre dans le media quey*/    
+}
+
+
+.animationH1{        
+    animation-duration: 0.8s;
+    animation-name: h1Header; 
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.26, 0.54, 0.32, 1);
+    animation-delay: 0.9s;
+    animation-direction: normal; 
+    animation-fill-mode: backwards;
+    animation-play-state: running;
+}
+
+@keyframes h1Header {        
+    0% {         
+        transform: translateY(100px);
+        height: 100%;
+    }/*début (0%/from)*/
+
+    /*50% {
+        font-size: 100px 
+    }*/
+
+    100% {         
+        transform: translateY(0px); 
+        height: 100%;
+    }/*fin (100%/to)*/    
+}
+
+
+/************************* NavBar **************************/
+
+.navBar{
+    /*background-color: red;*/
+    height: 187px;/**/
+    display: flex;
+    align-items: center;
+}
+
+.iconMenuOuSearch{
+    /*background-color: green;*/
+    color:aliceblue;
+    display: flex;
+}
+
+.containerLink{
+    /*background-color: blueviolet;*/
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+
+}
+
+.containerAboutEtTraining{
+    /*background-color: blue;*/
+    display: flex;
+    align-items: center;
+}
+
+.cointainerLogo{
+    /*background-color: orange;*/
+    width: 10em;
+    height: 100%;;
+}
+
+.cointainerLogo img{
+    width: 100%;
+    height: 100%;
+}
+
+.containerContactEtProfil{
+    /*background-color: pink;*/
+    display: flex;
+    align-items: center;
+}
+
+li{
+   list-style: none;
+}
+
+.Link{
+    text-decoration: none;
+    /*background-color: aqua;*/
+    padding: 1em;
+    font-size: 1.3em;
+}
+.iconTraining{
+    display: flex;
+    align-items: center;
+}
+
+.search{
+    font-size: 1.5em;
+    
+}
+.searchRight{
+    font-size: 1.5em;
+    color:aliceblue;
+}
+/**************************** Menu *******************************/
+.menu{
+    /*background-color: yellow;*/
+    font-size: 1.5em;
+    
+    /*display: none;*/
+}
+
+.divLinkMenu{
+    display: none;
+}
+
+.divLinkMenuBlock{
+    background-color:aliceblue;
+    display: flex;
+    flex-direction: column;
+}
+
+.LinkMenuMargin{
+    margin: 0.5em;
+    text-decoration: none;
+    color: #272829;
+}
+
+
+/**************************** media query ***********************/
+@media screen and (min-width:1px){
+    .imageAccueil{
+        
+        height: 422px;
+    }
+    .navBar{
+        height: 47px;
+    }
+    .search{
+        display: none;
+    }
+    .containerAboutEtTraining{
+        display: none;
+    }
+    .cointainerLogo{
+        display: none;
+        
+    }
+    .containerContactEtProfil{
+        display: none
+    }
+    .h2Header{
+        font-size: 20px; 
+        text-align: center;
+             
+    }
+}
+
+@media screen and (min-width:130px){
+    .navBar{
+        height: 50px;
+    }
+    .cointainerLogo{
+        display: contents;
+    }
+       
+}
+
+@media screen and (min-width:150px){
+    .navBar{
+        height: 55px;
+    }
+       
+}
+@media screen and (min-width:170px){
+    .navBar{
+        height: 60px;
+    } 
+       
+}
+
+@media screen and (min-width:190px){
+    .navBar{
+        height: 70px;
+    }
+    .h2Header{
+        font-size: 25px; 
+              
+    }
+       
+}
+
+@media screen and (min-width:200px){
+    
+    .navBar{
+        height: 80px;
+    }
+}
+
+@media screen and (min-width:230px){
+    
+    .navBar{
+        height: 90px;
+    }
+    
+}
+
+@media screen and (min-width:250px){
+    .navBar{
+        height: 100px;
+    }
+    .h2Header{
+        font-size: 30px; 
+        margin-top: 110px;      
+    }
+    
+}
+
+@media screen and (min-width:270px){
+    .navBar{
+        height: 110px;
+    }
+    
+}
+
+@media screen and (min-width:335px){/**/
+    .navBar{
+        height: 116px;
+    }
+       
+}
+
+@media screen and (min-width:410px){
+    .h2Header{
+        font-size: 35px;
+                
+    }
+    
+}
+@media screen and (min-width:430px){
+    .h2Header{
+        font-size: 40px;
+        margin-top: 80px;        
+    }
+    
+}
+
+@media screen and (min-width:450px){
+    .h2Header{
+        font-size: 45px;
+                
+    }
+    
+}
+
+@media screen and (min-width:450px){
+    .h2Header{
+        font-size: 50px;
+                
+    }
+    
+}
+@media screen and (min-width:470px){
+    .h2Header{
+        font-size: 55px;
+                
+    }
+    
+}
+
+@media screen and (min-width:500px){
+    .h2Header{
+        font-size: 60px;
+                
+    }
+    
+}
+
+@media screen and (min-width:590px){
+    .imageAccueil{
+        
+        height: 650px;
+    }
+    .navBar{
+        height: 187px;
+    }
+    .h2Header{
+        font-size: 80px;
+        margin-top: 100px;      
+    }
+    
+}
+
+@media screen and (min-width:770px){
+    
+    .containerAboutEtTraining, .containerContactEtProfil{
+        display: inherit;
+        flex-direction: column;
+        justify-content: center
+    }
+    
+
+}
+@media screen and (min-width:830px){
+    
+    .containerContactEtProfil{
+        flex-direction: inherit;
+    }
+    
+
+}
+
+@media screen and (min-width:950px){
+    
+    .containerAboutEtTraining{
+        flex-direction: inherit;
+    }
+    
+
+}
+
