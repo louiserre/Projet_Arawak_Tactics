@@ -1,14 +1,17 @@
 import React from "react"
 //import "pages/home/style.css"
-import {Menu} from "pages/home/component/menuNavBar/Menu.js"
+//import {Menu} from "pages/home/component/menuNavBar/Menu.js"
 import { Link } from "react-router-dom"
-import { AiOutlineSearch, AiOutlineUser } from "react-icons/ai"
+import { AiOutlineSearch, AiOutlineUser, AiOutlineMenu  } from "react-icons/ai"
 import { BsChevronDown } from "react-icons/bs";
 import logo from "assets/brand/logo.png"
 //AiOutlineMenu
 
 export const NavBar = () => {
-
+  
+  const iconMenu = <AiOutlineMenu/>
+  const iconSearch = <AiOutlineSearch/>
+  const vivi = true
    
   return (
 
@@ -16,13 +19,12 @@ export const NavBar = () => {
       <nav className="navBar">
 
         <div className="iconMenuOuSearch">
+
           <div className="search">
             <AiOutlineSearch></AiOutlineSearch>
           </div>
           
-          <div className="componentNenu">
-            <Menu></Menu>
-          </div>
+          
           
         </div>
 
