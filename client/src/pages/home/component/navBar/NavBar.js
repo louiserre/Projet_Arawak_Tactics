@@ -1,30 +1,40 @@
-import React from "react"
+import React, { useEffect } from "react"
 //import "pages/home/style.css"
 //import {Menu} from "pages/home/component/menuNavBar/Menu.js"
 import { Link } from "react-router-dom"
-import { AiOutlineSearch, AiOutlineUser, AiOutlineMenu  } from "react-icons/ai"
+import { AiOutlineSearch, AiOutlineUser, AiOutlineMenu } from "react-icons/ai"
 import { BsChevronDown } from "react-icons/bs";
 import logo from "assets/brand/logo.png"
 //AiOutlineMenu
 
 export const NavBar = () => {
   
-  const iconMenu = <AiOutlineMenu/>
-  const iconSearch = <AiOutlineSearch/>
-  const vivi = true
-   
+  const [iconSearch,setIconSearch] = React.useState(<AiOutlineSearch/>)
+  
+  useEffect(() => {
+    const body = document.querySelector('body')
+    const bodyWidthViewport = () => {
+      
+      if(body.clientWidth <= 765)  {
+        setIconSearch(<AiOutlineMenu/>)
+      }else{
+        setIconSearch(<AiOutlineSearch/>)
+      }
+      
+    }
+
+    setInterval(bodyWidthViewport, 100)
+         
+  },[])
+
   return (
 
     <React.Fragment>
       <nav className="navBar">
 
         <div className="iconMenuOuSearch">
-
-          <div className="search">
-            <AiOutlineSearch></AiOutlineSearch>
-          </div>
-          
-          
+                    
+            {iconSearch}
           
         </div>
 
@@ -56,19 +66,4 @@ export const NavBar = () => {
 }
 
 
-/**************************** test ***************************/
 
- /*let divRoot = document.querySelector("#root")
-  let vivi = 700
-  let lulu = divRoot.clientWidth
-
-  let iconMenuOuSearch;
-  if(vivi  <= lulu){
-    
-    iconMenuOuSearch = <AiOutlineSearch className="loi"></AiOutlineSearch>
-    
-  }else{
-    iconMenuOuSearch = <AiOutlineMenu className="lou"></AiOutlineMenu>
-    
-  }*/
-  //{/*iconMenuOuSearch*/}

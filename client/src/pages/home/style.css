@@ -108,6 +108,8 @@
     /*background-color: green;*/
     color:aliceblue;
     display: flex;
+    font-size: 1.5em;
+    padding-left: 0.5em;
 }
 
 .containerLink{
@@ -161,9 +163,13 @@ li{
     font-size: 1.5em;
     
 }
+
 .searchRight{
     font-size: 1.5em;
     color:aliceblue;
+    display: inline-block;
+    padding-right: 0.5em;
+    
 }
 /**************************** Menu *******************************/
 /*
@@ -191,7 +197,7 @@ li{
 
 
 /**************************** media query ***********************/
-/*
+
 @media screen and (min-width:1px){
     .imageAccueil{
         
@@ -200,9 +206,9 @@ li{
     .navBar{
         height: 47px;
     }
-    .search{
+    /*.search{
         display: none;
-    }
+    }*/
     .containerAboutEtTraining{
         display: none;
     }
@@ -355,14 +361,17 @@ li{
     
 }
 
-@media screen and (min-width:770px){
+@media screen and (min-width:765px){ /*770*/
     
     .containerAboutEtTraining, .containerContactEtProfil{
         display: inherit;
         flex-direction: column;
         justify-content: center
     }
-    
+    .searchRight{
+        display:none;
+       
+    }
 
 }
 @media screen and (min-width:830px){
@@ -382,4 +391,4 @@ li{
     
 
 }
-*/
+
