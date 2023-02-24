@@ -10,9 +10,10 @@ import logo from "assets/brand/logo.png"
 export const NavBar = () => {
   
   const [iconSearch,setIconSearch] = React.useState(<AiOutlineSearch/>)
-  
+    
   useEffect(() => {
     const body = document.querySelector('body')
+
     const bodyWidthViewport = () => {
       
       if(body.clientWidth <= 765)  {
@@ -22,9 +23,9 @@ export const NavBar = () => {
       }
       
     }
-
+  
     setInterval(bodyWidthViewport, 100)
-         
+             
   },[])
 
   return (
