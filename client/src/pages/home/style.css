@@ -101,7 +101,7 @@
     height: 187px;/**/
     display: flex;
     align-items: center;
-    /*position: relative;*/ /* ajout de la position relative sur le parent*/
+    /*position: relative;*/ 
 }
 
 .iconMenuOuSearch{
@@ -172,40 +172,7 @@ li{
     
 }
 /**************************** Menu *******************************/
-/*
-.menu{
-    background-color: yellow;
-    font-size: 1.5em;
-}
 
-.divLinkMenu{
-    display: none;
-}
-
-.divLinkMenuBlock{
-    background-color:aliceblue;
-    display: flex;
-    flex-direction: column;
-}
-
-.LinkMenuMargin{
-    margin: 0.5em;
-    text-decoration: none;
-    color: #272829;
-}
-*/
-
-/*.menu13{
-    background-color: brown;
-}*/
-/*.displayBlockMenu{
-    
-    display:flex;
-    flex-direction: column;
-    background-color: red;
-}*/
-
-/**************    menu ************/
 .menuContainerLink{
     display: inherit;
     display: flex;
@@ -213,21 +180,17 @@ li{
     width: 20em;
     position: absolute;
     top:0;
-    
 }
 
 .menuContainerAboutEtTraining{
-    
+    display: inherit;
     display: flex;
     flex-direction: column;
-    
-    
 }
 
 .menuContainerContactEtProfil{
     display: flex;
     flex-direction: column;
-    
 }
 
 /**************************** media query ***********************/
@@ -408,12 +371,12 @@ li{
     }
 
 }
+
 @media screen and (min-width:830px){
     
     .containerContactEtProfil{
         flex-direction: inherit;
     }
-    
 
 }
 
@@ -423,6 +386,5 @@ li{
         flex-direction: inherit;
     }
     
-
 }
 

@@ -1,10 +1,9 @@
 import React, { useEffect } from "react"
 //import "pages/home/style.css"
-//import {Menu} from "pages/home/component/menuNavBar/Menu.js"
 import { Link } from "react-router-dom"
 import { AiOutlineSearch, AiOutlineUser, AiOutlineMenu } from "react-icons/ai"
 import { BsChevronDown } from "react-icons/bs";
-//import { IconName } from "react-icons/fa";
+//import { FaTimes} from "react-icons/fa";
 import logo from "assets/brand/logo.png"
 
 
@@ -29,61 +28,48 @@ export const NavBar = () => {
     const tailleViewport = sizeViewport()
     //console.log(tailleViewport);
 
-
     
-    const menu = () => {
+    const navBarmenu = () => {
       
-      const containerLink =  document.querySelector('.containerLink')
-      const cointainerLogo = document.querySelector('.cointainerLogo')
-      const containerAboutEtTraining = document.querySelector('.containerAboutEtTraining')
-      const iconBsChevronDown =  document.querySelector('.iconBsChevronDown')
-      const containerContactEtProfil = document.querySelector('.containerContactEtProfil')
+      const containerLinkNav =  document.querySelector('.containerLink')
+      const cointainerLogoNav = document.querySelector('.cointainerLogo')
+      const containerLinkAboutEtTrainingNav = document.querySelector('.containerAboutEtTraining')
+      const iconBsChevronDownNav =  document.querySelector('.iconBsChevronDown')
+      const containerLinkContactEtProfilNav = document.querySelector('.containerContactEtProfil')
       const iconAiOutlineUser = document.querySelector('.iconAiOutlineUser')
 
       if(body.clientWidth <= 765)  { //tailleViewport.clientWidth 
-       
-        //containerLink.style.display = "inherit"
-        containerLink.classList.add("menuContainerLink")
-        containerLink.style.height = `${tailleViewport.clientHeight}px` // sa fonctionne c'est juste que le bloc dépasse son parent par le haut il faut rajouter ou il commence et regarder si les autres qui sont a l'interieur son la
-        /*containerLink.style.top = "0"*/
+               
+        containerLinkNav.classList.add("menuContainerLink")
+        containerLinkNav.style.height = `${tailleViewport.clientHeight}px` 
         
-        
-        containerAboutEtTraining.style.display = "inherit"
-        containerAboutEtTraining.classList.add("menuContainerAboutEtTraining")
+        containerLinkAboutEtTrainingNav.style.display = "inherit"
+        containerLinkAboutEtTrainingNav.classList.add("menuContainerAboutEtTraining")
 
+        containerLinkContactEtProfilNav.style.display = "inherit"
+        containerLinkContactEtProfilNav.classList.add("menuContainerContactEtProfil")
 
-        containerContactEtProfil.style.display = "inherit"
-        containerContactEtProfil.classList.add("menuContainerContactEtProfil")
-
+        cointainerLogoNav.style.display = "none"
         
-        cointainerLogo.style.display = "none"
-        
-        iconBsChevronDown.style.display = "none"
+        iconBsChevronDownNav.style.display = "none"
         
         iconAiOutlineUser.style.display = "none"
-        
-      }else{
-        //containerLink.style.display = "none"
-        //containerAboutEtTraining.style.display = "none"
-        //cointainerLogo.style.display = "block"
-        //containerContactEtProfil.style.display = "none"
         
       }
       
     }
-    console.log(menu());
+    
 
-    const bodyWidthViewport = () => {
-      //const body = document.querySelector('body')
-      if(body.clientWidth <= 765)  {//body.clientWidth
-        setIconSearch(<AiOutlineMenu className="pipi" onClick={menu}/>)
+    const widthViewport = () => {
+      
+      if(body.clientWidth <= 765)  {
+        setIconSearch(<AiOutlineMenu  onClick={navBarmenu}/>)
       }else{
         setIconSearch(<AiOutlineSearch/>)
       }
       
     }
-  
-    setInterval(bodyWidthViewport, 100)
+    setInterval(widthViewport, 100)
              
   },[])
 
@@ -129,61 +115,3 @@ export const NavBar = () => {
 
 
 
-/*
- const menu = () => {
-      
-      const containerAboutEtTraining = document.querySelector('.containerAboutEtTraining')
-      const containerContactEtProfil = document.querySelector('.containerContactEtProfil')
-
-      if(body.clientWidth <= 765)  {
-        //containerAboutEtTraining.style.display = "block"
-        containerAboutEtTraining.style.display = "flex"
-        containerContactEtProfil.style.display = "flex"
-
-        containerAboutEtTraining.style.flexDirection = "column"
-        containerContactEtProfil.style.flexDirection = "column"
-        
-      }else{
-        containerAboutEtTraining.style.display = "none"
-        containerContactEtProfil.style.display = "none"
-      }
-      
-    }
-*/
-
-
-
-/*
-if(body.clientWidth <= 765)  {
-       
-        //containerLink.classList.add("menuContainerLink")
-        containerLink.style.display = "flex"
-        containerLink.style.flexDirection = "column"
-
-
-        //containerAboutEtTraining.classList.add("menuContainerAboutEtTraining")
-        containerAboutEtTraining.style.display = "inherit"
-        containerAboutEtTraining.classList.add("menuContainerAboutEtTraining")
-
-
-        //containerContactEtProfil.classList.add("menuContainerContactEtProfil")
-        //containerContactEtProfil.style.display = "flex"
-        //containerContactEtProfil.style.flexDirection = "column"
-        containerContactEtProfil.style.display = "inherit"
-        containerContactEtProfil.classList.add("menuContainerContactEtProfil")
-
-        
-        cointainerLogo.style.display = "none"
-        
-        iconBsChevronDown.style.display = "none"
-        
-        iconAiOutlineUser.style.display = "none"
-        
-      }else{
-        containerLink.style.display = "none"
-        containerAboutEtTraining.style.display = "none"
-        //cointainerLogo.style.display = "block"
-        containerContactEtProfil.style.display = "none"
-        
-      }
-*/
