@@ -6,7 +6,6 @@
     padding: 0;
 }
 
-
 @font-face {
     font-family: "Unica One";
     src: url("assets/font/unicaOne/UnicaOne-Regular.ttf");
@@ -28,7 +27,7 @@
     background-attachment: scroll;
     background-size: cover;
     background-repeat: no-repeat; 
-             
+    position: relative;  /*a retirer*/      
 }
 
 
@@ -98,14 +97,15 @@
 /************************* NavBar **************************/
 
 .navBar{
-    /*background-color: red;*/
+    background-color: red;
     height: 187px;/**/
     display: flex;
     align-items: center;
+    /*position: relative;*/ /* ajout de la position relative sur le parent*/
 }
 
 .iconMenuOuSearch{
-    /*background-color: green;*/
+    background-color: green;
     color:aliceblue;
     display: flex;
     font-size: 1.5em;
@@ -113,7 +113,7 @@
 }
 
 .containerLink{
-    /*background-color: blueviolet;*/
+    background-color: blueviolet;
     display: flex;
     margin-left: auto;
     margin-right: auto;
@@ -122,13 +122,13 @@
 }
 
 .containerAboutEtTraining{
-    /*background-color: blue;*/
+    background-color: blue;
     display: flex;
     align-items: center;
 }
 
 .cointainerLogo{
-    /*background-color: orange;*/
+    background-color: orange;
     width: 10em;
     height: 100%;;
 }
@@ -139,7 +139,7 @@
 }
 
 .containerContactEtProfil{
-    /*background-color: pink;*/
+    background-color: pink;
     display: flex;
     align-items: center;
 }
@@ -195,6 +195,40 @@ li{
 }
 */
 
+/*.menu13{
+    background-color: brown;
+}*/
+/*.displayBlockMenu{
+    
+    display:flex;
+    flex-direction: column;
+    background-color: red;
+}*/
+
+/**************    menu ************/
+.menuContainerLink{
+    display: inherit;
+    display: flex;
+    flex-direction: column;
+    width: 20em;
+    position: absolute;
+    top:0;
+    
+}
+
+.menuContainerAboutEtTraining{
+    
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+.menuContainerContactEtProfil{
+    display: flex;
+    flex-direction: column;
+    
+}
 
 /**************************** media query ***********************/
 
